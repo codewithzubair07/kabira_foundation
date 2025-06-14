@@ -1,3 +1,6 @@
+
+
+
 import React, { useState } from 'react';
 import { Upload, FileText, Video, Menu, X, ArrowRight, BookOpen, Users, Trophy, Globe } from 'lucide-react';
 

@@ -1,11 +1,18 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(),
-        tailwindcss(),
+  base: '/kabira_foundation/',
 
+  plugins: [
+    react(),
+    tailwindcss(),
   ],
-})
+
+  server: {
+    host: true, // 👈 allows external access (including tunnels)
+    origin: 'http://localhost:5173', // 👈 match your local dev server
+    strictPort: true,
+  },
+});
